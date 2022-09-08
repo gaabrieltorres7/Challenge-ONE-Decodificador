@@ -12,7 +12,9 @@
 <body>
 
   <header>
-    <img id="logo" src="./assets/img/Logo.svg" alt="logo">
+    <div class="header-container">
+      <img id="logo" src="./assets/img/Logo.svg" alt="logo">
+    </div>
   </header>
 
   <main>
@@ -21,18 +23,17 @@
 
       <div class="left-container">
         <div class="area">
-          <textarea name="area" id="input-text" cols="30" rows="10" placeholder="Write down here" autofocus></textarea>
+          <textarea name="area" id="input-text" cols="20" rows="10" placeholder="Write down here" autofocus></textarea>
         </div>
 
-        <div class="left-down">
-          <div class="warning">
-            <img src="./assets/img/Vector.svg" alt="warning-logo">
-            <span>Only lowercase letters and no accents.</span>
-          </div>
-          <div class="btn-area">
-            <button id="encrypt">Encrypt</button>
-            <button id="descrypt">Decrypt</button>
-          </div>
+
+        <div class="warning">
+          <img src="./assets/img/Vector.svg" alt="warning-logo">
+          <span>Only lowercase letters and no accents.</span>
+        </div>
+        <div class="btn-area">
+          <button id="encrypt">Encrypt</button>
+          <button id="descrypt">Decrypt</button>
         </div>
       </div>
 

@@ -4,12 +4,8 @@ body {
   margin: 0;
 }
 
-main {
-  display: flex;
-  justify-content: center;
-  padding: 3.1rem;
-  width: 80vw;
-  margin: 0 auto;
+.header-container {
+  padding: 10px 5%;
 }
 
 .btn-area {
@@ -17,20 +13,16 @@ main {
 }
 
 .full-container {
-  display: flex;
-  justify-content: center;
-  min-width: 25rem;
-  padding: 6rem;
-  gap: 3rem;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  justify-items: center;
+  padding: 5% 10%;
+  min-height: 35vh;
+  gap: 2rem;
 }
 
 #logo {
   animation: pisca 1.8s linear infinite;
-}
-
-header {
-  width: 80vw;
-  padding: 10px;
 }
 
 .area {
@@ -65,15 +57,22 @@ span {
   color: #495057;
 }
 
+.left-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  width: 70%;
+}
+
 .warning {
   display: flex;
-  align-items: center;
   gap: 0.5rem;
+  align-items: center;
 }
 
 .btn-area {
   display: flex;
-  gap: 1.5rem;
 }
 
 #encrypt {
@@ -157,10 +156,14 @@ span {
 }
 
 .right-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
   background-color: #fff;
   padding: 2.5rem;
   border-radius: 2rem;
-  width: 25rem;
+  width: 80%;
   box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
 }
 
@@ -182,8 +185,9 @@ span {
 footer {
   display: flex;
   justify-content: space-between;
+  align-content: center;
   border-top: 1px solid #dee2e6;
-  width: 80vw;
+  max-width: 85vw;
   margin: 0 auto;
 }
 
@@ -216,16 +220,81 @@ ul {
   }
 }
 
-@media (max-width: 1350px) {
-  header,
+@media (max-width: 1260px) {
   .full-container {
-    width: 30vw;
+    padding: 5% 1.5%;
+    gap: 20px;
   }
 }
 
-@media (max-width: 1150px) {
-  header,
+@media (max-width: 1130px) {
   .full-container {
-    width: 20vw;
+    grid-template-columns: 1fr;
+  }
+
+  .warning {
+    justify-content: center;
+  }
+
+  .btn-area {
+    justify-content: center;
+  }
+
+  #input-text {
+    max-width: 300px;
+  }
+
+  .area {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+  }
+
+  #background-img {
+    display: none;
+  }
+
+  .right-area {
+    margin: 0 auto;
+    width: 200px;
+    height: 150px;
+  }
+
+  footer {
+    width: 75%;
+  }
+}
+
+@media (max-width: 650px) {
+  .right-container {
+    padding: 10px;
+  }
+  .caution h2 {
+    font-size: 1.2rem;
+    padding: 5px;
+  }
+  .btn-area {
+    gap: 20px;
+  }
+  #encrypt {
+    min-width: 150px;
+  }
+  #descrypt {
+    min-width: 150px;
+  }
+}
+
+@media (max-width: 300px) {
+  #input-text {
+    height: 200px;
+  }
+  .area {
+    margin-right: -50px;
+  }
+  #encrypt {
+    min-width: 100px;
+  }
+  #descrypt {
+    min-width: 100px;
   }
 }

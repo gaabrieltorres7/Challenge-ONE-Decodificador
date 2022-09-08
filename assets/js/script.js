@@ -72,16 +72,3 @@ function copyText() {
   }, 1500);
   input.focus();
 }
-
-function escreve(placeholder) {
-  const array = placeholder.getAttribute("placeholder").split("");
-  placeholder.setAttribute("placeholder", "");
-  array.forEach((letra, i) => {
-    setTimeout(() => {
-      placeholder.setAttribute("placeholder", letra);
-    }, 300 * i);
-  });
-}
-
-const placeholder = document.getElementById("input-text");
-escreve(placeholder);
